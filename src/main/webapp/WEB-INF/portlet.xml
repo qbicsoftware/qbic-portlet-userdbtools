@@ -8,8 +8,8 @@
 
 	<portlet>
 		<description>This is a template of a QBiC portlet</description>
-		<portlet-name>Portlet Template</portlet-name>
-		<display-name>Portlet Template</display-name>
+		<portlet-name>UserDB_Tools</portlet-name>
+		<display-name>UserDB_Tools</display-name>
 
 		<portlet-class>com.vaadin.server.VaadinPortlet</portlet-class>
 
@@ -30,8 +30,8 @@
 
 
 		<portlet-info>
-			<title>Portlet Template</title>
-			<short-title>Portlet Template</short-title>
+			<title>UserDB_Tools</title>
+			<short-title>UserDB_Tools</short-title>
 			<keywords>Vaadin 7</keywords>
 		</portlet-info>
 
