@@ -92,7 +92,7 @@ public class MyPortletUI extends UI {
     public static String tmpFolder;
 
     private IOpenBisClient openbis;
-    private boolean testMode = true;
+    private boolean testMode = false;
 
     @Override
     protected void init(VaadinRequest request) {
@@ -109,10 +109,11 @@ public class MyPortletUI extends UI {
         // establish connection to the OpenBIS API
         if (!isDevelopment() || !testMode) {
             try {
-                this.openbis = new OpenBisClient(config.getOpenbisUser(), config.getOpenbisPass(),
-                        config.getOpenbisURL());
+                this.openbis = new OpenBisClient(config.getOpenbisUser().trim(), config.getOpenbisPass().trim(),
+                        config.getOpenbisURL().trim());
                 this.openbis.login();
             } catch (Exception e) {
+                System.out.println("openbis connection failed");
                 // success = false;
                 // logger.error(
                 // "User \"" + userID + "\" could not connect to openBIS and has been informed of this.");
@@ -207,6 +208,7 @@ public class MyPortletUI extends UI {
 
                 openbisProjects = openbis.listProjects();
             } else {
+
                 openbisProjects = openbis.getOpenbisInfoService()
                         .listProjectsOnBehalfOfUser(openbis.getSessionToken(), userID);
             }
