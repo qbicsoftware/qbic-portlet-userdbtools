@@ -75,9 +75,9 @@ package life.qbic.main;
 @Widgetset("life.qbic.AppWidgetSet")
 public class MyPortletUI extends UI {
 
-    @WebServlet(value = "/*", asyncSupported = true)
-    @VaadinServletConfiguration(productionMode = false, ui = MyPortletUI.class,
-            widgetset = "qdbtools.main.widgetset.QuserdbtoolsWidgetset")
+//    @WebServlet(value = "/*", asyncSupported = true)
+//    @VaadinServletConfiguration(productionMode = false, ui = MyPortletUI.class,
+//            widgetset = "qdbtools.main.widgetset.QuserdbtoolsWidgetset")
     public static class Servlet extends VaadinServlet {
     }
 
@@ -113,7 +113,6 @@ public class MyPortletUI extends UI {
                         config.getOpenbisURL().trim());
                 this.openbis.login();
             } catch (Exception e) {
-                System.out.println("openbis connection failed");
                 // success = false;
                 // logger.error(
                 // "User \"" + userID + "\" could not connect to openBIS and has been informed of this.");

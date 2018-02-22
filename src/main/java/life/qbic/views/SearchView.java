@@ -62,6 +62,7 @@ public class SearchView extends VerticalLayout {
         personsTable = new Table("People");
         personsTable.setPageLength(1);
         personsTable.setStyleName(ValoTheme.TABLE_SMALL);
+        personsTable.setEditable(true);
         // persons.addContainerProperty("ID", Integer.class, null);
         // persons.addContainerProperty("User", String.class, null);
         personsTable.addContainerProperty("Title", String.class, null);
@@ -125,6 +126,7 @@ public class SearchView extends VerticalLayout {
 
         affiliations = new Table("Affiliations");
         affiliations.setStyleName(ValoTheme.TABLE_SMALL);
+        affiliations.setEditable(true);
         // affiliations.addContainerProperty("ID", Integer.class, null);
         affiliations.addContainerProperty("Group", String.class, null);
         // affiliations.addContainerProperty("acronym", String.class, null);
